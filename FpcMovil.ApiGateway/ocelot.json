@@ -1,0 +1,24 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7197
+        }
+      ],
+      "UpstreamPathTemplate": "/api/weathers",
+      "UpstreamHttpMethod": [
+        "Get", "Options"
+      ],
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "DangerousAcceptAnyServerCertificateValidator": true
+  }
+}

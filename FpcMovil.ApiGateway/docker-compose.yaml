@@ -1,0 +1,13 @@
+﻿version: "3.4"
+
+services:
+  api-gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fpc-movil-api-gateway
+    image: fpc-movil-api-gateway
+    ports:
+      - "7000:80"
+      - "7443:443"
+    
